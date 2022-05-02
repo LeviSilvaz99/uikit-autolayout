@@ -13,7 +13,7 @@
         <scene sceneID="8Dt-aD-Ejr">
             <objects>
                 <viewController id="brf-q4-CUc" userLabel="Menu View Controller" customClass="MenuViewController" customModule="PirateHandbook" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="L1R-nN-lSh">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="L1R-nN-lSh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -23,8 +23,15 @@
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="CjS-Px-8Ug">
-                                <rect key="frame" x="116" y="58" width="183.5" height="136"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please do not pirate the pirate handbook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" translatesAutoresizingMaskIntoConstraints="NO" id="WoS-3x-5Se">
+                                <rect key="frame" x="16" y="857.5" width="370" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" id="CjS-Px-8Ug">
+                                <rect key="frame" x="115" y="381" width="184" height="136"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMg-JX-PR3">
                                         <rect key="frame" x="0.0" y="0.0" width="183.5" height="40"/>
@@ -69,6 +76,13 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1vX-mu-xp7"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1vX-mu-xp7" firstAttribute="trailing" secondItem="WoS-3x-5Se" secondAttribute="trailing" constant="16" id="4tN-lO-62E"/>
+                            <constraint firstItem="CjS-Px-8Ug" firstAttribute="leading" secondItem="1vX-mu-xp7" secondAttribute="leading" constant="109" id="QIt-ei-ocV"/>
+                            <constraint firstItem="WoS-3x-5Se" firstAttribute="leading" secondItem="1vX-mu-xp7" secondAttribute="leading" constant="16" id="R33-t4-YF4"/>
+                            <constraint firstItem="WoS-3x-5Se" firstAttribute="top" secondItem="CjS-Px-8Ug" secondAttribute="bottom" constant="341" id="R3A-4y-W7x"/>
+                            <constraint firstItem="1vX-mu-xp7" firstAttribute="bottom" secondItem="WoS-3x-5Se" secondAttribute="bottom" constant="8" id="Yty-08-HRW"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yVS-U5-5xY" userLabel="First Responder" sceneMemberID="firstResponder"/>
